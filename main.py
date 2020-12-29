@@ -49,7 +49,6 @@ async def say_fumatorul(ctx):
         vc.play(discord.FFmpegPCMAudio(source='out.mp3'))
         while vc.is_playing():
             sleep(.1)
-        print(current_members)
         await ctx.voice_client.disconnect()
     except AttributeError:
         await ctx.send(f"{author.mention} is an idiot")
